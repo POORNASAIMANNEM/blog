@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmy Moji Blog</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #ddd;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Main Content Layout */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Main Article */
+        main {
+            flex: 2;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        article:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        article h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        article h2:hover {
+            color: #555;
+        }
+
+        article .meta {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+        }
+
+        article img:hover {
+            opacity: 0.9;
+        }
+
+        article .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        article .button:hover {
+            background-color: #555;
+            transform: translateY(-2px);
+        }
+
+        /* Sidebar */
+        aside {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        aside h3 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin-top: 0;
+            border-radius: 5px;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 5px;
+        }
+
+        aside ul li:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        aside ul li a:hover {
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #aaa;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #back-to-top:hover {
+            background-color: #555;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            aside {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            article img {
+                max-height: 300px;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>NEWS TODAY</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="assd">Home</a></li>
+                <li><a href="#" >About</a></li>
+                <li><a href="#jklo">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <main>
+            <article>
+                <h2 id="apple">Mobile Launch</h2>
+                <p class="meta">By Apple India | August 18, 2024</p>
+                <img src="https://assets.mspimages.in/gear/wp-content/uploads/2023/01/Apple-flagship-store.png" alt="Filmy Moji Blog Image">
+                <p>Extra staff is another very clear indication of production ramping up as the release approaches. And the timing is a good fit for the release date of Friday, September 20—more on the dates below.</p>
+                <p><a href="#" class="button">Read More</a></p>
+            </article>
+
+            <article>
+                <h2 id="moji">Welcome to the Filmy Moji Blog!</h2>
+                <p class="meta">By Filmy Moji Team | August 18, 2024</p>
+                <img src="https://i.ytimg.com/vi/VGGbcaGeklg/maxresdefault.jpg" alt="Filmy Moji Blog Image">
+                <p>Welcome to the official blog of the <strong>Filmy Moji</strong> YouTube channel! If you're passionate about movies, entertainment, and everything Bollywood, you're in the right place. Here, we’ll dive deeper into the world of cinema, bringing you exclusive insights, behind-the-scenes stories, and much more.</p>
+                <p><a href="#" class="button">Read More</a></p>
+            </article>
+
+            <article>
+                <h2 id="rrr">Crossed 1000 Crores</h2>
+                <p class="meta">By Times Of India | August 18, 2024</p>
+                <img src="https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg" alt="Filmy Moji Blog Image">
+                <p>RRR is a 2022 Indian Telugu-language epic period action drama film directed by S. S. Rajamouli, who co-wrote the film with V. Vijayendra Prasad The film grossed ₹1,389.31 crore (US$170 million) worldwide, setting several box office records for an Indian film, including the third highest-grossing Indian film, the second highest-grossing Telugu film, the highest-grossing Telugu film of 2022 and the highest-grossing Indian film of 2022 worldwide.</p>
+                <p><a href="#" class="button">Read More</a></p>
+            </article>
+
+            <article>
+                <h2 id="roh">Is Sharma Continuing</h2>
+                <p class="meta">By BCCI | August 18, 2024</p>
+                <img src="https://www.hindustantimes.com/ht-img/img/2024/05/19/1600x900/CRICKET-IND-IPL-T20-MUMBAI-LUCKNOW-24_1716114993418_1716115009727.jpg" alt="Filmy Moji Blog Image">
+                <p>As of now, Rohit Sharma is likely to continue leading Mumbai Indians in the upcoming IPL seasons. Given his successful track record as captain, with five IPL titles to his name, and his significant contributions as a batsman, the franchise would be keen to retain him as their leader. But due to negligence of team he there are roomers that he is no more playing for Mumbai .</p>
+                <p><a href="#" class="button">Read More</a></p>
+            </article>
+
+            <article>
+                <h2 id="doc">Doctors National Strike</h2>
+                <p class="meta">By Sakshi | August 18, 2024</p>
+                <img src="https://i.ytimg.com/vi/Kz25uRSWvh4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA0P9nOZsWALaNjVQkmNw2xK47kRQ" alt="Filmy Moji Blog Image">
+                <p>Nationwide protests erupted after the killing of a 31-year-old resident doctor in Kolkata, whose brutalised body was discovered last Friday in the seminar hall of RG Kar Medical College. She had gone to rest after a 36-hour shift, only to be found murdered in the morning.</p>
+                <p><a href="#" class="button">Read More</a></p>
+            </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <h3>Recent Posts</h3>
+            <ul>
+                <li><a href="#apple">Apple Launch Event: Unveiling the Future</a></li>
+                <li><a href="#rrr">Movies: RRR Box Office Collection</a></li>
+                <li><a href="#moji">Trending 1: Sankranthi Celebrations</a></li>
+                <li><a href="#doc">Trending Now: Doctors Strike</a></li>
+                <li><a href="#roh">Sports: Is Captain Continuing</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p id="jklo">Contact us: poorna@gmail.com</p>
+        <p>Follow us on 
+            <a href="#">Twitter</a>, 
+            <a href="#">Facebook</a>, 
+            <a href="#">Instagram</a>
+        </p>
+        <p>&copy; 2024 News Today</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top">↑ Back to Top</div>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
